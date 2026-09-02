@@ -10,7 +10,7 @@ Telegram-бот для управления клиентами, заказами
 
 ## <img src="images/link.svg" width="24"> Живой пример
 
-[Перейти к боту](https://t.me/XVOLKX_CRM_BOT)
+[Перейти к боту](https://t.me/XvolkX_crm_bot)
 
 ## <img src="images/features.svg" width="24"> Функции
 
