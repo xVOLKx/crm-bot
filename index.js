@@ -8,6 +8,7 @@ const axios = require('axios');
 const cron = require('node-cron');
 const { createCanvas } = require('canvas');
 const Chart = require('chart.js/auto');
+const express = require('express');
 
 // ============================================================
 // 2. ПОДКЛЮЧЕНИЕ К БАЗЕ ДАННЫХ
