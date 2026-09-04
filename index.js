@@ -64,7 +64,10 @@ Client.hasMany(Order, { foreignKey: 'client_id' });
 // 4. ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
 // ============================================================
 async function isAdmin(ctx) {
-  const user = await User.findOne({ where: { telegram_id: ctx.from.id } });
+  const user = await User.findOne({
+    where: { telegram_id: ctx.from.id },
+    raw: true,
+  });
   return user && user.role === 'admin';
 }
 
