@@ -28,7 +28,7 @@ Telegram-бот для управления клиентами, заказами
 1. Клонируй репозиторий:
    ```bash
    git clone https://github.com/xVOLKx/parser-analytics-bot.git
-   cd parser-analytics-bot
+   cd crm-bot
    ```
 2. Установи зависимости:
     ```bash
@@ -48,7 +48,7 @@ Telegram-бот для управления клиентами, заказами
     ```
 4. Запусти:
     ```bash
-    node bot.js
+    node index.js
     ```
 ## <img src="images/tech.svg" width="24" align="vertical-align: middle"> Технологии 
 
