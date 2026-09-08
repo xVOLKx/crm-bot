@@ -987,6 +987,22 @@ async function start() {
     await sequelize.authenticate();
     console.log('✅ Подключение к базе данных успешно');
 
+    // ============================================================
+    // ВРЕМЕННОЕ НАЗНАЧЕНИЕ АДМИНА (УДАЛИТЬ ПОТОМ)
+    // ============================================================
+    try {
+      const adminUser = await User.findOne({ where: { telegram_id: 6186556006 } });
+      if (adminUser) {
+        adminUser.role = 'admin';
+        await adminUser.save();
+        console.log('✅ Админ назначен принудительно для ID: 6186556006');
+      } else {
+        console.log('⚠️ Пользователь с ID 6186556006 не найден');
+      }
+    } catch (err) {
+      console.error('❌ Ошибка при назначении админа:', err.message);
+    }
+
     await sequelize.sync({ alter: true });
     console.log('✅ Модели синхронизированы');
 
